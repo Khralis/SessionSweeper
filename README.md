@@ -22,5 +22,4 @@ Press *Scroll Lock* to toggle lock your current session and stop people from joi
 **No,** process suspension and firewall blockage can happen on any normal computer.<br>
 <br>
 **Image:**<br>
-![Screenshot](https://i.imgur.com/wHqn1z4.png)
-
+![Screenshot](https://i.imgur.com/2qPdeFC.png)
