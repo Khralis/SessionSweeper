@@ -16,10 +16,12 @@ namespace SessionSweeper
         public fMain()
         {
             InitializeComponent();
-            RegisterHotKey(this.Handle, 0, 0, Keys.Pause.GetHashCode());
-            RegisterHotKey(this.Handle, 1, 0, Keys.Scroll.GetHashCode());
-            RegisterHotKey(this.Handle, 2, 0, Keys.PrintScreen.GetHashCode());
-            RegisterHotKey(this.Handle, 3, 0, Keys.End.GetHashCode());
+            //change arg3 to "0x4000" (MOD_NOREPEAT) to prevent hotkey firing multiple times when held 
+            //https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-registerhotkey
+            RegisterHotKey(this.Handle, 0, 0x4000, Keys.Pause.GetHashCode());
+            RegisterHotKey(this.Handle, 1, 0x4000, Keys.Scroll.GetHashCode());
+            RegisterHotKey(this.Handle, 2, 0x4000, Keys.PrintScreen.GetHashCode());
+            RegisterHotKey(this.Handle, 3, 0x4000, Keys.End.GetHashCode());
             DataStorage.FirewallControl.UnlockLobby();
             FormClosing += fMain_Closing;
         }
